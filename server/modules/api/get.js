@@ -20,6 +20,12 @@ function createGetApi(app) {
         return res.status(500).json({ error: err });
     }
     });
+
+    // get a book based on his unique id
+    app.get("/books/:id", async (req, res) => {
+    return res.status(404).json({ error: "Not implemented" });
+    });
+
 }
 
 module.exports = { createGetApi };
